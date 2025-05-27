@@ -955,6 +955,8 @@ input.btn:focus { border-width: 2px; }
 /* border color */
 .border-color-white { border-color: #fff !important; }
 .border-color-black { border-color: #000 !important; }
+.border-color-green-longevity { border-color: #D3D3B3 !important; }
+.border-color-fendi-inovation { border-color: #6B6448 !important; }
 .border-color-sky-blue { border-color: #2e94eb !important; }
 .border-color-extra-dark-gray { border-color: #232323 !important; }
 .border-color-medium-dark-gray { border-color: #363636 !important; }

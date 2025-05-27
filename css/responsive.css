@@ -4760,6 +4760,13 @@
     .home-startup .rev_slider_wrapper { min-height: 450px; }
 }
 
+@media (min-width: 768px) {
+    .mb-md-6 { margin-bottom: 4rem !important;}
+    .mb-md-7 { margin-bottom: 5rem !important;}
+    .mb-md-8 { margin-bottom: 6rem !important;}
+    .mb-md-9 { margin-bottom: 7rem !important;}
+}
+
 @media (max-width: 778px) {
     /* home decor */
     .home-decor .rev_slider_wrapper { height: 540px; }
