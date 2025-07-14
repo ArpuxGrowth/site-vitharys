@@ -6408,6 +6408,7 @@
 
     /* text size */
     .text-extra-big-2 { font-size: 230px; line-height: 190px; }
+    .xs-fs-4rem { font-size: 3.9rem !important; }
 
     /* lineheight */
     .xs-line-height-0px { line-height: 0px; }
