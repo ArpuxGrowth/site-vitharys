@@ -2767,6 +2767,10 @@
     /* blog modern */
     .blog-modern .post-details { left: 20px; width: calc(100% - 40px); }
 
+    /* sidebar article search */
+    .article-search-sidebar li figure { width: 100px; }
+    .article-search-sidebar li div { padding-left: 15px; }
+
     /* sidebar latest post */
     .latest-post-sidebar li figure { width: 100px; }
     .latest-post-sidebar li div { padding-left: 15px; }
@@ -7899,6 +7903,9 @@
     /* blog widget */
     .blog-widget li figure { width: 100px; }
     .blog-widget li .media-body { padding-left: 15px; }
+    
+    /* sidebar article search */
+    .article-search-sidebar li figure { width: 80px; }
 
     /* sidebar latest post */
     .latest-post-sidebar li figure { width: 80px; }

@@ -3693,6 +3693,22 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .blog-comment li ul.child-comment { list-style: outside none none; margin-left:70px;}
 .blog-comment li ul.child-comment li { margin-top: 60px; padding-bottom: 0;}
 
+/* sidebar article search */
+.article-search-sidebar { list-style: none; padding: 0; margin: 0; position: absolute; top: 49px; display: none; z-index: 100; }
+.article-search-sidebar li {
+    display: flex;
+    padding: 20px 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    border-right: 1px solid rgba(0, 0, 0, .1);
+    background-color: white;
+    transition: all 0.4s;
+}
+.article-search-sidebar li:hover { background-color: rgb(235, 235, 235); }
+.article-search-sidebar li:last-child { border-radius: 0 0 10px 10px; }
+.article-search-sidebar li figure { height:65px; width: 80px; margin: 0; }
+.article-search-sidebar li .media-body { line-height: normal; padding-left: 20px; position: relative; top: -3px; }
+
 /* sidebar latest post */
 .latest-post-sidebar { list-style: none; padding: 0; margin: 0; }
 .latest-post-sidebar li { margin-bottom: 45px; }
