@@ -445,6 +445,7 @@
                     columnWidth: '.grid-sizer',
                 }
             });
+            window.blogGrid = _this;
             isotopeObjs.push( _this );
         });
     });
