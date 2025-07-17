@@ -21,25 +21,13 @@ function renderArticle(article) {
 
   document.title = title + ' – Clínica Vitharys';
 
-    const heroSection = document.getElementById('hero');
-    heroSection.classList = 'p-0 parallax';
-    heroSection.setAttribute('data-parallax-background-ratio', 0.3);
-    heroSection.style.cssText = `
-        background-image: url('${coverImg}');
-    `;
+  const heroSection = document.getElementById('hero');
+  heroSection.style.cssText = `
+      background-image: url('${coverImg}');
+  `;
 
-    const div = document.createElement('div');
-    div.classList = 'container-fluid position-relative';
-    div.innerHTML = `
-    <div class="row justify-content-center full-screen md-h-800px sm-h-500px">
-        <div class="col-xl-5 offset-lg-1 col-lg-6 col-md-8 col-sm-10 d-flex flex-column justify-content-center md-padding-35px-left xs-padding-15px-left">
-            <h6 class="fs-5 text-fendi-inovation text-uppercase">Clínica &nbsp;&nbsp;<strong class="font-weight-800" style="letter-spacing: 0.25rem;">Vitharys</strong></h6>
-            <h1 class="text-fendi-inovation font-weight-600 letter-spacing-minus-2px w-80 xl-w-100">Post</h1>
-            <p class="text-fendi-inovation margin-six-bottom sm-margin-20px-bottom">Explore artigos e insights sobre saúde integrada, inovação médica e qualidade de vida.</p>
-        </div>
-    </div>
-    `;
-    heroSection.appendChild(div);
+  const heroTitle = document.getElementById('hero-title');
+  heroTitle.textContent = title || 'Artigo não encontrado';
 
   const post = document.getElementById('post');
 
@@ -82,11 +70,11 @@ function renderArticle(article) {
 
   post.innerHTML = `
       <ul class="list-unstyled margin-2-rem-bottom">
-          <li class="d-inline-block align-middle margin-25px-right"><i class="feather icon-feather-calendar text-fast-blue margin-10px-right"></i><a href="#">${date}</a></li>
-          <li class="d-inline-block align-middle margin-25px-right"><i class="feather icon-feather-folder text-fast-blue margin-10px-right"></i><a href="#">Artigo</a></li>
-          <li class="d-inline-block align-middle"><i class="feather icon-feather-user text-fast-blue margin-10px-right"></i>Por <a href="#">Clínica Vitharys</a></li>
+          <li class="d-inline-block align-middle margin-25px-right"><i class="feather icon-feather-calendar text-fendi-inovation margin-10px-right"></i><a class="text-green-longevity-hover" href="#">${date}</a></li>
+          <li class="d-inline-block align-middle margin-25px-right"><i class="feather icon-feather-folder text-fendi-inovation margin-10px-right"></i><a class="text-green-longevity-hover" href="#">Artigo</a></li>
+          <li class="d-inline-block align-middle"><i class="feather icon-feather-user text-fendi-inovation margin-10px-right"></i>Por <a class="text-green-longevity-hover" href="#">Clínica Vitharys</a></li>
       </ul>
-      <h5 class="alt-font font-weight-500 text-extra-dark-gray margin-4-half-rem-bottom">${title}</h5>
+      <h5 class="alt-font font-weight-500 text-fendi-inovation margin-4-half-rem-bottom">${title}</h5>
       <img src="${coverImg}" alt="" class="w-100 border-radius-6px margin-4-half-rem-bottom">
       ${renderContent(content)}
   `
@@ -112,7 +100,7 @@ function renderLatestPosts(slice) {
               <a href="${uid}"><img class="border-radius-3px" src="${latestImg}" alt=""></a>
           </figure>
           <div class="media-body flex-grow-1">
-              <a href="${uid}" class="font-weight-500 text-extra-dark-gray d-inline-block margin-five-bottom md-margin-two-bottom">${title}</a>
+              <a href="${uid}" class="font-weight-500 text-fendi-inovation text-green-longevity-hover d-inline-block margin-five-bottom md-margin-two-bottom">${title}</a>
               <span class="text-medium d-block line-height-22px">${date}</span>
           </div>
       `
@@ -137,14 +125,17 @@ function renderRelatedPosts(slice) {
       li.classList = 'grid-item wow animate__fadeIn';
       li.setAttribute('data-wow-delay', `${delay}s`);
       li.innerHTML = `
-          <div class="blog-post">
-              <div class="blog-post-image bg-fast-blue">
-                  <a href="${uid}"><img src="${thumbImg}" alt=""></a>
+          <div class="blog-post text-center border-radius-6px bg-white box-shadow box-shadow-large-hover">
+              <div class="blog-post-image bg-green-longevity">
+                  <a href="${uid}"><img src="${thumbImg}" alt="${title}">
+                      <div class="blog-rounded-icon bg-white border-color-white absolute-middle-center">
+                          <i class="feather icon-feather-arrow-right text-extra-dark-gray icon-extra-small"></i>
+                      </div>
+                  </a>
               </div>
-              <div class="post-details bg-white text-center padding-3-rem-all xl-padding-2-rem-all">
-                  <a href="${uid}" class="blog-category text-fast-blue margin-15px-bottom text-medium font-weight-500 letter-spacing-1px text-uppercase">Artigo</a>
-                  <a href="${uid}" class="alt-font text-extra-dark-gray text-extra-dark-gray-hover text-large line-height-26px d-block margin-20px-bottom">${title}</a>
-                  <a href="${uid}" class="alt-font text-uppercase text-extra-small letter-spacing-1px d-block">${date}</a>
+              <div class="post-details padding-30px-all xl-padding-25px-lr">
+                  <a href="${uid}" class="post-author text-medium text-uppercase text-green-longevity-hover">${date}</a>
+                  <a href="${uid}" class="text-fendi-inovation text-green-longevity-hover font-weight-500 alt-font d-block">${title}</a>
               </div>
           </div>
       `
@@ -168,7 +159,7 @@ function searchArticles(articles) {
           <a href="${uid}"><img class="border-radius-3px" src="${latestImg}" alt=""></a>
       </figure>
       <div class="media-body flex-grow-1">
-          <a href="${uid}" class="font-weight-500 text-extra-dark-gray d-inline-block margin-five-bottom md-margin-two-bottom"><span class="item-name">${title}</span></a>
+          <a href="${uid}" class="font-weight-500 text-fendi-inovation text-green-longevity-hover d-inline-block margin-five-bottom md-margin-two-bottom"><span class="item-name">${title}</span></a>
           <span class="text-medium d-block line-height-22px">${date}</span>
       </div>
     `;

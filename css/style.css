@@ -4115,7 +4115,7 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .list-style-07 li a { display: inline-block; text-align: left;}
 .list-style-07 li .item-qty { font-size: 14px; position: absolute; top: 1px; right: 0; text-align: right;}
 .list-style-07 li a:hover .product-cb:after, .list-style-07 li a.active .product-cb:after, .list-style-07 li a .product-cb:hover:after { font-family: "Font Awesome\ 5 Free"; font-size: 10px; content: "\f00c"; position: absolute; left: 3px; top: -1px; font-weight: 900; line-height: 16px; }
-.list-style-07 li a:hover { color: #0038e3; }
+.list-style-07 li a:hover { color: #D3D3B3; }
 .list-style-07.filter-category li, .list-style-07.filter-size li { padding: 0 30px; }
 .list-style-07.filter-category li a .product-cb, .list-style-07.filter-size li a .product-cb { width: 16px; height: 16px; border-radius: 100%; text-align: center; margin-right: 12px; display: inline-block; border: 1px solid #cacaca; background-color: #fff; position: relative; top: 4px; }
 .list-style-07.filter-category li a .product-cb.product-category-cb, .list-style-07.filter-size li a .product-cb.product-size-cb { position: absolute; top: 2px; left: 0; }
