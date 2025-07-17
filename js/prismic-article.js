@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   try {
     // Start -> Get 'article', 'latest-posts', 'related-posts' and 'article-search' elements
-    const article = await client.getByUID('blog_post', uid);
+    const article = await client.getByUID('blog_post', slug);
     const articles = await client.getAllByType('blog_post');
     const slice = articles.slice(0, 3);
     // End -> Get 'article', 'latest-posts',, 'related-posts' and 'article-search' elements
