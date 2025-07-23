@@ -75,7 +75,7 @@ function renderArticle(article) {
           <li class="d-inline-block align-middle"><i class="feather icon-feather-user text-fendi-inovation margin-10px-right"></i>Por <a class="text-green-longevity-hover" href="#">Clínica Vitharys</a></li>
       </ul>
       <h5 class="alt-font font-weight-500 text-fendi-inovation margin-4-half-rem-bottom">${title}</h5>
-      <img src="${coverImg}" alt="" class="w-100 border-radius-6px margin-4-half-rem-bottom">
+      <img src="${coverImg}" alt="${title}" class="w-100 border-radius-6px margin-4-half-rem-bottom">
       ${renderContent(content)}
   `
 }
@@ -85,7 +85,8 @@ function renderArticle(article) {
 function renderLatestPosts(slice) {
   slice.forEach((blog, i) => {
       const uid = blog.uid;
-      const title = blog.data.title[0]?.text.length > 55 ? blog.data.title[0]?.text.slice(0, 52) + '...' : blog.data.title[0]?.text || 'Título não encontrado';
+      const title = blog.data.title[0]?.text;
+      const truncatedTitle = blog.data.title[0]?.text.length > 55 ? blog.data.title[0]?.text.slice(0, 52) + '...' : blog.data.title[0]?.text || 'Título não encontrado';
       const date = Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(blog.data.date));
       const latestImg = blog.data.latest_image?.url;
       const delay = 0.2 * (i + 1);
@@ -97,10 +98,10 @@ function renderLatestPosts(slice) {
       li.setAttribute('data-wow-delay', `${delay}s`);
       li.innerHTML = `
           <figure class="flex-shrink-0">
-              <a href="${uid}"><img class="border-radius-3px" src="${latestImg}" alt=""></a>
+              <a href="${uid}"><img class="border-radius-3px" src="${latestImg}" alt="${title}"></a>
           </figure>
           <div class="media-body flex-grow-1">
-              <a href="${uid}" class="font-weight-500 text-fendi-inovation text-green-longevity-hover d-inline-block margin-five-bottom md-margin-two-bottom">${title}</a>
+              <a href="${uid}" class="font-weight-500 text-fendi-inovation text-green-longevity-hover d-inline-block margin-five-bottom md-margin-two-bottom" title="${title}">${truncatedTitle}</a>
               <span class="text-medium d-block line-height-22px">${date}</span>
           </div>
       `
@@ -114,7 +115,8 @@ function renderLatestPosts(slice) {
 function renderRelatedPosts(slice) {
   slice.forEach((blog, i) => {
       const uid = blog.uid;
-      const title = blog.data.title[0]?.text.length > 55 ? blog.data.title[0]?.text.slice(0, 52) + '...' : blog.data.title[0]?.text || 'Título não encontrado';
+      const title = blog.data.title[0]?.text;
+      const truncatedTitle = blog.data.title[0]?.text.length > 55 ? blog.data.title[0]?.text.slice(0, 52) + '...' : blog.data.title[0]?.text || 'Título não encontrado';
       const date = Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(blog.data.date));
       const thumbImg = blog.data.thumb_image?.url;
       const delay = 0.2 * (i + 1);
@@ -135,7 +137,7 @@ function renderRelatedPosts(slice) {
               </div>
               <div class="post-details padding-30px-all xl-padding-25px-lr">
                   <a href="${uid}" class="post-author text-medium text-uppercase text-green-longevity-hover">${date}</a>
-                  <a href="${uid}" class="text-fendi-inovation text-green-longevity-hover font-weight-500 alt-font d-block">${title}</a>
+                  <a href="${uid}" class="text-fendi-inovation text-green-longevity-hover font-weight-500 alt-font d-block" title="${title}">${truncatedTitle}</a>
               </div>
           </div>
       `
@@ -148,7 +150,8 @@ function renderRelatedPosts(slice) {
 function searchArticles(articles) {
   articles.forEach((article) => {
     const uid = article.uid;
-    const title = article.data.title[0]?.text.length > 55 ? article.data.title[0]?.text.slice(0, 52) + '...' : article.data.title[0]?.text || 'Título não encontrado';
+    const title = article.data.title[0]?.text;
+    const truncatedTitle = article.data.title[0]?.text.length > 55 ? article.data.title[0]?.text.slice(0, 52) + '...' : article.data.title[0]?.text || 'Título não encontrado';
     const date = Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(article.data.date));
     const latestImg = article.data.latest_image?.url;
 
@@ -156,10 +159,10 @@ function searchArticles(articles) {
     const li = document.createElement('li');
     li.innerHTML = `
       <figure class="flex-shrink-0">
-          <a href="${uid}"><img class="border-radius-3px" src="${latestImg}" alt=""></a>
+          <a href="${uid}"><img class="border-radius-3px" src="${latestImg}" alt="${title}"></a>
       </figure>
       <div class="media-body flex-grow-1">
-          <a href="${uid}" class="font-weight-500 text-fendi-inovation text-green-longevity-hover d-inline-block margin-five-bottom md-margin-two-bottom"><span class="item-name">${title}</span></a>
+          <a href="${uid}" class="font-weight-500 text-fendi-inovation text-green-longevity-hover d-inline-block margin-five-bottom md-margin-two-bottom"><span class="item-name" title="${title}">${truncatedTitle}</span></a>
           <span class="text-medium d-block line-height-22px">${date}</span>
       </div>
     `;
@@ -245,7 +248,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   try {
     // Start -> Get 'article', 'latest-posts', 'related-posts' and 'article-search' elements
     const article = await client.getByUID('blog_post', slug);
-    const articles = await client.getAllByType('blog_post');
+    const articles = await client.getAllByType('blog_post',  {
+        orderings: [
+          {
+            field: "document.first_publication_date",
+            direction: "desc"
+          }
+        ]
+    });
     const slice = articles.slice(0, 3);
     // End -> Get 'article', 'latest-posts',, 'related-posts' and 'article-search' elements
     renderArticle(article);
