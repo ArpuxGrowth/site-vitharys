@@ -3106,6 +3106,9 @@ header .header-cart-icon .cart-count { position: absolute; top: -6px; right: -10
 .top-bar-contact .top-bar-contact-list i {margin-right: 6px; font-size: 14px; position: relative; top: 1px; }
 .top-bar .social-icon li {font-size: 13px; padding: 0 9px; display: inline-block}
 
+/* exam input */
+.input-exam { max-width: 650px; }
+
 /* header search form */
 .form-wrapper { background: rgba(35,35,35,.9); width: 100%; left: 0; top: 0; overflow: hidden !important; transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -webkit-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; display: block !important; height: 100%; position: fixed; visibility: hidden; opacity: 0; z-index: 999; }
 .active-form .form-wrapper { opacity: 1; visibility: visible; cursor: url(../images/mfg-close.png),auto; }
@@ -3694,7 +3697,7 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .blog-comment li ul.child-comment li { margin-top: 60px; padding-bottom: 0;}
 
 /* sidebar exam search */
-.exam-search-sidebar { list-style: none; padding: 0; margin: 0; position: absolute; top: 49px; display: block; z-index: 100; }
+.exam-search-sidebar { list-style: none; width: 100%; padding: 0; margin: 0; position: absolute; top: 49px; display: none; z-index: 100; }
 .exam-search-sidebar li {
     display: flex;
     padding: 20px 10px;
@@ -4646,7 +4649,7 @@ footer .footer-horizontal-link li:last-child {margin-right: 0}
 .footer-sticky { position: fixed; width: 100%; bottom: 0; left: 0; right: 0; z-index: 0; }
 
 /* scroll to top */
-.scroll-top-arrow, .scroll-top-arrow:focus { background: #fff; font-size: 17px; line-height: 34px; box-shadow: 0 0 25px rgba(23,23,23,.25); display: none; height: 34px; width: 34px; padding: 0; position: fixed; right: 45px; text-align: center; text-decoration: none; bottom: 45px; z-index: 1029; border-radius: 100%; }
+.scroll-top-arrow, .scroll-top-arrow:focus { background: #fff; font-size: 17px; line-height: 34px; box-shadow: 0 0 25px rgba(23,23,23,.25); display: none; height: 34px; width: 34px; padding: 0; position: fixed; right: 35px; text-align: center; text-decoration: none; bottom: 110px; z-index: 1029; border-radius: 100%; }
 .scroll-top-arrow:hover { background: #fff; color: #828282; box-shadow: 0 0 30px rgba(23,23,23,.4);-webkit-transform: translateY(-2px); -ms-transform: translateY(-2px); transform: translateY(-2px);}
 
 /* footer instagram feed */

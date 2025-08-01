@@ -157,27 +157,18 @@
                         <h6 class="alt-font text-fendi-inovation font-weight-500">Exames que realizamos:</h6>
                     </div>
                 </div>
-                <div class="position-relative margin-eight-bottom">
+                <div class="input-exam mx-auto w-100 position-relative margin-eight-bottom">
                     <div>
                         <input id="input-search" onkeyup="filtrar()" class="search-input medium-input border-color-medium-gray border-radius-4px mb-0" placeholder="Buscar exame..." type="text" />
                         <button type="submit" class="bg-transparent btn text-fendi-inovation position-absolute right-5px top-8px text-medium md-top-8px sm-top-10px search-button"><i class="feather icon-feather-search ms-0"></i></button>
                     </div>
                     <ul id="exam-search" class="exam-search-sidebar">
-                        <li>
-                            <figure class="flex-shrink-0">
-                                <a href="#"><img class="border-radius-3px" src="images/bioimpedance-02.jpg" alt=""></a>
-                            </figure>
-                            <div class="media-body flex-grow-1">
-                                <a href="#" class="font-weight-500 text-fendi-inovation text-green-longevity-hover d-inline-block margin-five-bottom md-margin-two-bottom"><span class="item-name" title="">Bioimpedância</span></a>
-                                <span class="text-medium d-block line-height-22px">Exame</span>
-                            </div>
-                        </li>
                         <!-- ... -->
                     </ul>
                 </div> 
                 <div class="row row-cols-1 row-cols-lg-2 row-cols-sm-2 justify-content-center">
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.2s">
+                    <div id="bioimpedance" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.2s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/bioimpedance-02.jpg" alt="">
@@ -190,7 +181,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.4s">
+                    <div id="indirect-calorimetry" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.4s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/indirect-calorimetry-02.jpg" alt="">
@@ -203,7 +194,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.6s">
+                    <div id="electrocardiogram" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.6s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/electrocardiogram-02.jpg" alt="">
@@ -216,7 +207,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.8s">
+                    <div id="blood-test" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.8s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/blood-test-02.jpg" alt="">
@@ -229,7 +220,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.0s">
+                    <div id="polysomnography" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.0s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/polysomnography-02.jpg" alt="">
@@ -242,7 +233,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.2s">
+                    <div id="gynecological-routine" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.2s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/gynecological-routine-02.jpg" alt="">
@@ -255,7 +246,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.4s">
+                    <div id="genetic-testing" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.4s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/genetic-testing-02.jpg" alt="">
@@ -268,7 +259,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.6s">
+                    <div id="ultrasound" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.6s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/ultrasound-02.jpg" alt="">
@@ -281,7 +272,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.8s">
+                    <div id="holter" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.8s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/holter-02.jpg" alt="">
@@ -294,7 +285,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="2.0s">
+                    <div id="urine-test" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="2.0s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/urine-test-02.jpg" alt="">
@@ -307,7 +298,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="2.2s">
+                    <div id="laryngoscopy" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="2.2s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/laryngoscopy-02.jpg" alt="">
@@ -320,7 +311,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="2.4s">
+                    <div id="stroboscopy" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="2.4s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/stroboscopy-02.jpg" alt="">
@@ -333,7 +324,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="2.6s">
+                    <div id="tococardiography" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="2.6s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/tococardiography-02.jpg" alt="">
@@ -346,7 +337,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="2.8s">
+                    <div id="salivary-cortisol" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="2.8s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/salivary-cortisol-02.jpg" alt="">
@@ -359,7 +350,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="2.6s">
+                    <div id="pathological-anatomy" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="2.6s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/pathological-anatomy-02.jpg" alt="">
@@ -372,7 +363,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="2.4s">
+                    <div id="bacterioscopy" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="2.4s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/bacterioscopy-02.jpg" alt="">
@@ -385,7 +376,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="2.2s">
+                    <div id="bodygee" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="2.2s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/bodygee-02.jpg" alt="">
@@ -398,7 +389,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="2.0s">
+                    <div id="pcr" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="2.0s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/pcr-02.jpg" alt="">
@@ -411,7 +402,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.8s">
+                    <div id="antibiogram" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.8s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/antibiogram-02.jpg" alt="">
@@ -424,7 +415,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.6s">
+                    <div id="antifungal-test" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.6s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/antifungal-test-02.jpg" alt="">
@@ -437,7 +428,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.4s">
+                    <div id="dermatoscopy" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.4s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/dermatoscopy-02.jpg" alt="">
@@ -450,7 +441,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.2s">
+                    <div id="color-doppler" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.2s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/color-doppler-02.jpg" alt="">
@@ -463,7 +454,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.0s">
+                    <div id="doppler-echocardiogram" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="1.0s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/doppler-echocardiogram-02.jpg" alt="">
@@ -476,7 +467,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.8s">
+                    <div id="molecular-hybridization" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.8s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/molecular-hybridization-02.jpg" alt="">
@@ -489,7 +480,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.6s">
+                    <div id="oximetry" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.6s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/oximetry-02.jpg" alt="">
@@ -502,7 +493,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.4s">
+                    <div id="pap-smear" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.4s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/pap-smear-02.jpg" alt="">
@@ -515,7 +506,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.2s">
+                    <div id="peniscopy" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.2s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/peniscopy-02.jpg" alt="">
@@ -528,7 +519,7 @@
                     </div>
                     <!-- end services item -->
                     <!-- start services item -->
-                    <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.4s">
+                    <div id="skin-thermometry" class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.4s">
                         <div class="feature-box">
                             <div class="feature-box-icon margin-30px-bottom md-margin-30px-bottom">
                                 <img class="rounded-circle w-200px h-200px border-all border-width-1px border-dashed border-color-medium-gray padding-10px-all" src="images/skin-thermometry-02.jpg" alt="">
@@ -607,7 +598,7 @@
         <!-- end scroll to top -->
         <!-- javascript -->
         <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/9b11b11e-02aa-48d3-aa59-c6ebaf4b24d4-loader.js" ></script>
-        <script type="text/javascript" src="js/search-exam.js"></script>
+        <script type="module" src="js/search-exam.js"></script>
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/theme-vendors.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
