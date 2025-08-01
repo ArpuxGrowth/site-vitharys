@@ -21,6 +21,13 @@
         <link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
         <link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
         <link rel="stylesheet" type="text/css" href="revolution/css/navigation.css">
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MHJ8GLXG');</script>
+        <!-- End Google Tag Manager -->
     </head>
     <body data-mobile-nav-style="classic">
         <!-- start header -->
@@ -150,6 +157,24 @@
                         <h6 class="alt-font text-fendi-inovation font-weight-500">Exames que realizamos:</h6>
                     </div>
                 </div>
+                <div class="position-relative margin-eight-bottom">
+                    <div>
+                        <input id="input-search" onkeyup="filtrar()" class="search-input medium-input border-color-medium-gray border-radius-4px mb-0" placeholder="Buscar exame..." type="text" />
+                        <button type="submit" class="bg-transparent btn text-fendi-inovation position-absolute right-5px top-8px text-medium md-top-8px sm-top-10px search-button"><i class="feather icon-feather-search ms-0"></i></button>
+                    </div>
+                    <ul id="exam-search" class="exam-search-sidebar">
+                        <li>
+                            <figure class="flex-shrink-0">
+                                <a href="#"><img class="border-radius-3px" src="images/bioimpedance-02.jpg" alt=""></a>
+                            </figure>
+                            <div class="media-body flex-grow-1">
+                                <a href="#" class="font-weight-500 text-fendi-inovation text-green-longevity-hover d-inline-block margin-five-bottom md-margin-two-bottom"><span class="item-name" title="">Bioimpedância</span></a>
+                                <span class="text-medium d-block line-height-22px">Exame</span>
+                            </div>
+                        </li>
+                        <!-- ... -->
+                    </ul>
+                </div> 
                 <div class="row row-cols-1 row-cols-lg-2 row-cols-sm-2 justify-content-center">
                     <!-- start services item -->
                     <div class="col margin-40px-bottom wow animate__fadeIn" data-wow-delay="0.2s">
@@ -582,9 +607,14 @@
         <!-- end scroll to top -->
         <!-- javascript -->
         <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/9b11b11e-02aa-48d3-aa59-c6ebaf4b24d4-loader.js" ></script>
+        <script type="text/javascript" src="js/search-exam.js"></script>
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/theme-vendors.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHJ8GLXG"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
 
         <!-- revolution js files -->
         <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
